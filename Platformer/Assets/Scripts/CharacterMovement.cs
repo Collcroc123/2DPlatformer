@@ -9,8 +9,6 @@ public class CharacterMovement : MonoBehaviour
     private float gravity = 9.8f;
     public float speed = 10f;
     public float jumpForce = 10f;
-    private int maxJump = 1;
-    private bool isJumping = false;
     private bool startJumping = false;
 
     private void Start()
