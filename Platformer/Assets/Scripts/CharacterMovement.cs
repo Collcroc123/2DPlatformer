@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public CharacterController controller;
     private Vector3 positionDirection = Vector3.zero;
-    private float gravity = 9.8f;
+    private float gravity = 15f;
     public float speed = 10f;
     public float jumpForce = 10f;
     private bool startJumping = false;
