@@ -8,9 +8,10 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 positionDirection = Vector3.zero;
     private float gravity = 9.8f;
     public float speed = 10f;
-    public float jumpForce = 0.5f;
+    public float jumpForce = 10f;
     private int maxJump = 1;
-    private bool isJumping;
+    private bool isJumping = false;
+    private bool startJumping = false;
 
     private void Start()
     {
@@ -26,16 +27,15 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (isJumping == false)
-            {
-                Debug.Log("Jumping!");
-                positionDirection.y = jumpForce;
-                isJumping = true;
-            }
+            startJumping = true;
         }
-        if (controller.isGrounded)
+
+        if (startJumping == true)
         {
-            isJumping = false;
+            if (controller.isGrounded)
+            {
+                positionDirection.y = jumpForce;
+            }
         }
 
         //Running
