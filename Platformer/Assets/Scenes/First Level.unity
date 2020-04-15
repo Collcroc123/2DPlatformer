@@ -704,7 +704,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 000
+  m_Text: 0
 --- !u!222 &271011108
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1212,6 +1212,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7936315278390345767}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &735703345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7936315279065198869, guid: 3c93b64f81c8a0e48aada917ec7fb23c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7936315278390345767}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735703344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3c56d63e0b4af42968b8b8fd1957bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &735703349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7936315279065198866, guid: 3c93b64f81c8a0e48aada917ec7fb23c,
@@ -2655,6 +2667,7 @@ GameObject:
   - component: {fileID: 1414415324}
   - component: {fileID: 1414415326}
   - component: {fileID: 1414415325}
+  - component: {fileID: 1414415327}
   m_Layer: 5
   m_Name: TimeNum
   m_TagString: Untagged
@@ -2712,7 +2725,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 000
+  m_Text: 0
 --- !u!222 &1414415326
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2721,6 +2734,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414415323}
   m_CullTransparentMesh: 0
+--- !u!114 &1414415327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414415323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd384ac43b767f4bbe15b197d52883b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charMove: {fileID: 735703345}
+  timerText: {fileID: 1414415325}
 --- !u!1 &1425717077
 GameObject:
   m_ObjectHideFlags: 0
@@ -3337,7 +3364,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 000
+  m_Text: 0
 --- !u!222 &2082162210
 CanvasRenderer:
   m_ObjectHideFlags: 0

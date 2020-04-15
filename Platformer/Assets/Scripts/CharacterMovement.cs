@@ -9,7 +9,7 @@ public class CharacterMovement : MonoBehaviour
     private float gravity = 15f;
     public float speed = 10f;
     public float jumpForce = 10f;
-    private bool startJumping = false;
+    public bool startJumping = false;
 
     private void Start()
     {
