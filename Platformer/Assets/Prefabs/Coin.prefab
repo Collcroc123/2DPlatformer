@@ -173,6 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8449464196130870363}
   - component: {fileID: 1623916493543470329}
+  - component: {fileID: 3629655562710609465}
   - component: {fileID: 1124442080181190265}
   m_Layer: 0
   m_Name: Coin
@@ -247,6 +248,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3629655562710609465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585315904228931212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65eaca36f9e4a784eb88d8e4118825e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7936315279065198871, guid: 3c93b64f81c8a0e48aada917ec7fb23c, type: 3}
+  coinText: {fileID: 7658632237976102222, guid: a6922ab20a52b9b43a26e531a0fde4fa,
+    type: 3}
+  totalCoins: {fileID: 11400000, guid: 305b3d075b2807044b7289719ed68837, type: 2}
 --- !u!65 &1124442080181190265
 BoxCollider:
   m_ObjectHideFlags: 0
