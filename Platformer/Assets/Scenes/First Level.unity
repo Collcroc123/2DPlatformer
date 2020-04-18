@@ -1021,6 +1021,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3c56d63e0b4af42968b8b8fd1957bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &735703347 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7936315279065198868, guid: 3c93b64f81c8a0e48aada917ec7fb23c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7936315278390345767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &735703349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7936315279065198866, guid: 3c93b64f81c8a0e48aada917ec7fb23c,
@@ -1348,7 +1354,7 @@ GameObject:
   - component: {fileID: 1008059941}
   - component: {fileID: 1008059940}
   m_Layer: 5
-  m_Name: Button 1
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1415,7 +1421,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1008059941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 735703347}
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 8ab539261c710364ea2a507f332568d7,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1008059941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2299,7 +2317,7 @@ GameObject:
   - component: {fileID: 1629218550}
   - component: {fileID: 1629218549}
   m_Layer: 5
-  m_Name: Button 2
+  m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2366,7 +2384,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1629218550}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 735703347}
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 8b2758bc2c646be499adad7cada8b0a4,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1629218550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7562,7 +7592,7 @@ GameObject:
   - component: {fileID: 1998111486}
   - component: {fileID: 1998111485}
   m_Layer: 5
-  m_Name: Button 3
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7629,7 +7659,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1998111486}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 735703347}
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 92c1f5dbf769dc442b4be60121449487,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1998111486
 MonoBehaviour:
   m_ObjectHideFlags: 0
