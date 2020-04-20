@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7936315279065198868}
   - component: {fileID: 7936315279065198870}
   - component: {fileID: 7936315279065198869}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 92c1f5dbf769dc442b4be60121449487, type: 2}
+  - {fileID: 2100000, guid: 6058a8ac5daa56d46bf3b2a95f2ed9a3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   speed: 7
   jumpForce: 12
   startJumping: 0
+  jumpSound: {fileID: 0}
 --- !u!1 &7936315280319085221
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +129,7 @@ GameObject:
   - component: {fileID: 7936315280319085219}
   - component: {fileID: 7936315280319085220}
   - component: {fileID: 7936315280319085217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
