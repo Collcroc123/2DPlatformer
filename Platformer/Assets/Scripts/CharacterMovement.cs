@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
     public float speed = 10f;
     public float jumpForce = 10f;
     public bool startJumping = false;
+    public AudioSource jumpSound;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class CharacterMovement : MonoBehaviour
             if (controller.isGrounded)
             {
                 positionDirection.y = jumpForce;
+                jumpSound.Play(0);
             }
         }
 
