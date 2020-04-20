@@ -1,23 +1,21 @@
 ﻿using UnityEngine;
-using Cinemachine;
 
-[ExecuteInEditMode] [SaveDuringPlay] [AddComponentMenu("")] // Hide in menu
-public class LockCameraX : CinemachineExtension
+public class LockCameraX : MonoBehaviour
 {
-    //CODE HERE --> https://forum.unity.com/threads/follow-only-along-a-certain-axis.544511/
+    public Transform player;
+    private Vector3 playerPosition;
+    private Vector3 cameraPosition;
 
-    [Tooltip("Lock the camera's X position to this value")]
-    public float m_XPosition = 10;
- 
-    protected override void PostPipelineStageCallback(
-        CinemachineVirtualCameraBase vcam,
-        CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
+    void Update()
     {
-        if (stage == CinemachineCore.Stage.Body)
+        playerPosition = player.position;
+        cameraPosition = transform.position;
+
+        if(playerPosition.y > cameraPosition.y)
         {
-            var pos = state.RawPosition;
-            pos.x = m_XPosition;
-            state.RawPosition = pos;
+            cameraPosition.y = playerPosition.y;
         }
+
+        transform.position = cameraPosition;
     }
 }
