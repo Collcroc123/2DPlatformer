@@ -13,6 +13,7 @@ public class CharacterMovement : MonoBehaviour
     public FloatData jumpForce;
     public bool startJumping = false;
     public AudioSource jumpSound;
+    public Animator animate;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             startJumping = true;
+            animate.SetTrigger("Jump");
         }
 
         if (startJumping == true)
@@ -37,6 +39,8 @@ public class CharacterMovement : MonoBehaviour
             {
                 positionDirection.y = jumpForce.value;
                 jumpSound.Play(0);
+                animate.SetTrigger("Jump");
+
             }
         }
     }
