@@ -98,10 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65eaca36f9e4a784eb88d8e4118825e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7936315279065198871, guid: 3c93b64f81c8a0e48aada917ec7fb23c, type: 3}
+  player: {fileID: 4884235509028301290, guid: 3c93b64f81c8a0e48aada917ec7fb23c, type: 3}
   totalCoins: {fileID: 11400000, guid: 305b3d075b2807044b7289719ed68837, type: 2}
   coinObj: {fileID: 7473232263571138130}
-  coinSound: {fileID: 0}
+  coinSound: {fileID: 5975572150061494339, guid: 989bbbc28d48f2942b038de361819aeb,
+    type: 3}
 --- !u!65 &7473232263571138128
 BoxCollider:
   m_ObjectHideFlags: 0
