@@ -5,10 +5,12 @@
 public class CharacterMovement : MonoBehaviour
 {
     public CharacterController controller;
+    //public CharacterController controller2;
+    //public CharacterController controller3;
     private Vector3 positionDirection = Vector3.zero;
     private float gravity = 15f;
     public float speed = 10f;
-    public float jumpForce = 10f;
+    public FloatData jumpForce;
     public bool startJumping = false;
     public AudioSource jumpSound;
 
@@ -31,23 +33,11 @@ public class CharacterMovement : MonoBehaviour
 
         if (startJumping == true)
         {
-            if (controller.isGrounded)
+            if (controller.isGrounded) //|| controller2.isGrounded || controller3.isGrounded
             {
-                positionDirection.y = jumpForce;
+                positionDirection.y = jumpForce.value;
                 jumpSound.Play(0);
             }
         }
-
-        //Running
-        /*
-        if (Input.GetButton("Run"))
-        {
-            speed = 15f;
-        }
-        else
-        {
-            speed = 10f;
-        }
-        */
     }
 }
