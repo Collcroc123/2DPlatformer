@@ -10,12 +10,24 @@ public class Height : MonoBehaviour
     public float currentHeight;
     public Text heightText;
     public Text highScoreText;
-    private float currentBest = 0f;
+    public float currentBest = 0f;
     public IntData highScore;
     private bool brokeRecord = false;
     public UnityEvent confetti;
 
     //https://answers.unity.com/questions/123790/float-to-int.html
+
+    void Start()
+    {
+        if (highScore.value < 1)
+        {
+            highScore.value++;
+        }
+        else
+        {
+            print ("Beat the High Score to see confetti!");
+        }
+    }
 
     void Update()
     {
@@ -28,7 +40,7 @@ public class Height : MonoBehaviour
         if (currentHeight > highScore.value)
         {
             highScore.value = Mathf.FloorToInt(currentHeight);
-            if(brokeRecord == false)
+            if (brokeRecord == false)
             {
                 confetti.Invoke();
                 brokeRecord = true;

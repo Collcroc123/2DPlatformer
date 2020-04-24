@@ -5,8 +5,6 @@
 public class CharacterMovement : MonoBehaviour
 {
     public CharacterController controller;
-    //public CharacterController controller2;
-    //public CharacterController controller3;
     private Vector3 positionDirection = Vector3.zero;
     private float gravity = 15f;
     public float speed = 10f;
@@ -33,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (startJumping == true)
         {
-            if (controller.isGrounded) //|| controller2.isGrounded || controller3.isGrounded
+            if (controller.isGrounded)
             {
                 positionDirection.y = jumpForce.value;
                 jumpSound.Play(0);
