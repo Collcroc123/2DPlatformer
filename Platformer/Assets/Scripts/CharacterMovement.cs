@@ -20,17 +20,16 @@ public class CharacterMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
     }
 
-    void Update()
+    void Update ()
+    {
+        MoveCharacter();
+    }
+    
+    void MoveCharacter ()
     {
         positionDirection.x = Input.GetAxis("Horizontal") * speed;
         positionDirection.y -= gravity * Time.deltaTime;
         controller.Move(positionDirection * Time.deltaTime);
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            startJumping = true;
-            animate.SetTrigger("Jump");
-        }
 
         if (startJumping == true)
         {
@@ -40,6 +39,14 @@ public class CharacterMovement : MonoBehaviour
                 jumpSound.Play(0);
                 animate.SetTrigger("Jump");
             }
+            return;
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            startJumping = true;
+            animate.SetTrigger("Jump");
+            Debug.Log("Pressing Space!");
         }
     }
 }
