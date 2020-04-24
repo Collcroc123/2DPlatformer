@@ -22,7 +22,6 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-
         positionDirection.x = Input.GetAxis("Horizontal") * speed;
         positionDirection.y -= gravity * Time.deltaTime;
         controller.Move(positionDirection * Time.deltaTime);
@@ -40,7 +39,6 @@ public class CharacterMovement : MonoBehaviour
                 positionDirection.y = jumpForce.value;
                 jumpSound.Play(0);
                 animate.SetTrigger("Jump");
-
             }
         }
     }
