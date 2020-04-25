@@ -14,8 +14,8 @@ public class Hints : MonoBehaviour
 
         hints[0] = "Press space to start jumping, your player will then continue to auto-jump after that!";
         hints[1] = "You can select the colored box or press numbers 1-3 to change your color!";
-        hints[2] = "If you select easy mode, you'll have a health bar with 2 hits rahter than 1!";
-        hints[3] = "Aim for the platforms, if you fall, you die!";
+        hints[2] = "You can only take 3 hits before dying!";
+        hints[3] = "Aim for the platforms, if you fall, you instantly die!";
         hints[4] = "The golden platform will launch you 3x higher than a normal jump!";
         hints[5] = "Collect the gold coins on your way up, you won't lose them on death!";
         hints[6] = "Don't touch the red X's, they will hurt you! Some can also move around!";

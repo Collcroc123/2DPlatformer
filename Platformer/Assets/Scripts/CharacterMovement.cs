@@ -20,18 +20,18 @@ public class CharacterMovement : MonoBehaviour
 
     void Update ()
     {
-        MoveCharacter();
+        MoveCharacter(controller);
     }
     
-    void MoveCharacter ()
+    void MoveCharacter(CharacterController cc)
     {
         positionDirection.x = Input.GetAxis("Horizontal") * speed;
         positionDirection.y -= gravity * Time.deltaTime;
-        controller.Move(positionDirection * Time.deltaTime);
+        cc.Move(positionDirection * Time.deltaTime);
 
         if (startJumping == true)
         {
-            if (controller.isGrounded)
+            if (cc.isGrounded)
             {
                 positionDirection.y = jumpForce.value;
                 jumpSound.Play(0);
