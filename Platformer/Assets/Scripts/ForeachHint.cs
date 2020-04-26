@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Hints : MonoBehaviour
+public class ForeachHint : MonoBehaviour
 {
-    //This is the For() version of this script, for the ForEach() version look for the script "ForeachHint"
+    //This is the Foreach() version of this script, for the For() version look for the script "Hints"
     public Text hintText;
     private string[] hints;
 
@@ -28,14 +28,13 @@ public class Hints : MonoBehaviour
 
     IEnumerator changeHint()
     {
-        for(int i = 0; i < hints.Length; i++)
+        while (true)
         {
-            hintText.text = hints[i];
-            if(i == hints.Length-1)
+            foreach(string hint in hints)
             {
-                i = 0;
+                hintText.text = hint;
+                yield return new WaitForSeconds(5f);
             }
-            yield return new WaitForSeconds(5f);
         }
     }
 }
