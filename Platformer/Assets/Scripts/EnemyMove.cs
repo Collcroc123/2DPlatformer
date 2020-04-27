@@ -29,9 +29,9 @@ public class EnemyMove : MonoBehaviour
         {
             distance = (Time.time - startTime) * speed;
             journey = distance/length;
-            transform.position = Vector3.Lerp(startPos, endPos, journey);
+            transform.position = Vector3.Lerp(startPos, endPos, Time.deltaTime);
             yield return new WaitForSeconds(1f);
-            transform.position = Vector3.Lerp(endPos, startPos, journey);
+            transform.position = Vector3.Lerp(endPos, startPos, Time.deltaTime);
             yield return new WaitForSeconds(1f);
         }
         yield return new WaitForSeconds(1f);
